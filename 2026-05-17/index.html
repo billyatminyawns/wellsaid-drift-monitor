@@ -664,7 +664,7 @@ input::placeholder,textarea::placeholder{color:var(--ws-text-3)}
   .ws-rail,.ws-topbar,.sidebar{display:none !important}
   body{padding:0 !important}
   html,body,.content{background:#fff !important}
-}@media print{:root,:root[data-theme]{color-scheme:light;--ws-page:#fcfcfc; --ws-panel:#f8f8f8; --ws-surface:#ffffff; --ws-raised:#f8f8f8; --ws-hover:#f0f0f0; --ws-active:#dbdbdb; --ws-line:#dbdbdb; --ws-line-2:#c7c7c7; --ws-line-input:#999999; --ws-text:#1e1e1e; --ws-text-2:#444444; --ws-text-3:#646464; --ws-accent:#2c2c2c; --ws-accent-hover:#565656; --ws-on-accent:#fcfcfc; --ws-accent-text:#3c8455; --ws-secondary:#f8f8f8; --ws-secondary-hover:#f0f0f0; --ws-on-secondary:#2c2c2c; --ws-secondary-border:1px solid #646464; --ws-focus:#2c2c2c; --ws-link:#264974; --ws-tag-bg:#fbe0b7; --ws-tag-fg:#7d561b; --ws-chip:#f0f0f0; --ws-tooltip:#2c2c2c; --ws-rail-sep:rgba(0,0,0,.12); --ws-avatar:#75467d; --ws-highlight:#cb1240;}}</style><style id="ws-voice-css">
+}@media print{:root,:root[data-theme]{color-scheme:light;--ws-page:#fcfcfc; --ws-panel:#f8f8f8; --ws-surface:#ffffff; --ws-raised:#f8f8f8; --ws-hover:#f0f0f0; --ws-active:#dbdbdb; --ws-line:#dbdbdb; --ws-line-2:#c7c7c7; --ws-line-input:#999999; --ws-text:#1e1e1e; --ws-text-2:#444444; --ws-text-3:#646464; --ws-accent:#2c2c2c; --ws-accent-hover:#565656; --ws-on-accent:#fcfcfc; --ws-accent-text:#3c8455; --ws-secondary:#f8f8f8; --ws-secondary-hover:#f0f0f0; --ws-on-secondary:#2c2c2c; --ws-secondary-border:1px solid #646464; --ws-focus:#2c2c2c; --ws-link:#264974; --ws-tag-bg:#fbe0b7; --ws-tag-fg:#7d561b; --ws-chip:#f0f0f0; --ws-tooltip:#2c2c2c; --ws-rail-sep:rgba(0,0,0,.12); --ws-avatar:#75467d; --ws-highlight:#cb1240;}}</style><meta name="ws-demo" content="lms-alert"><style id="ws-voice-css">
 .ws-voice{margin:14px 0 4px;padding:12px 14px;border-radius:4px;background:var(--ws-raised);border:1px solid var(--ws-line-2)}
 .ws-voice-head{display:flex;align-items:center;gap:12px}
 .ws-voice-icon{width:32px;height:32px;border-radius:50%;background:var(--ws-active);color:var(--ws-text-2);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
@@ -685,6 +685,14 @@ input::placeholder,textarea::placeholder{color:var(--ws-text-3)}
 .ws-voice-script{font:400 14px/20px var(--ws-font-body);color:var(--ws-text);margin:10px 0 0;padding-top:10px;border-top:1px solid var(--ws-line)}
 .ws-voice-flag{margin-top:8px;font:600 12px/16px var(--ws-font-body);color:var(--ws-tag-fg);background:var(--ws-tag-bg);display:inline-block;padding:2px 8px;border-radius:4px}
 .ws-voice-hold{opacity:.85}
+.ws-voice-stack{display:flex;flex-direction:column;gap:8px;margin:14px 0 4px}
+.ws-voice-stack>.ws-voice{margin:0}
+.ws-voice-pub{border-color:var(--ws-accent)}
+.c-id .ws-voiced-pill+.new-pill{font-size:0;width:8px;height:8px;min-width:0;padding:0;margin-left:6px;border-radius:50%;flex:0 0 auto}
+.ws-pub-check{display:inline-flex;vertical-align:-2px;margin-right:4px;color:var(--ws-accent-text)}
+.ws-pub-check svg,.ws-pub-icon svg{width:14px;height:14px}
+.ws-pub-tag{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;font:600 12px/16px var(--ws-font-body);background:var(--ws-active);color:var(--ws-accent-text)}
+.ws-pub-tag svg{width:12px;height:12px}
 .ws-voiced-pill{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;margin-left:4px;border-radius:4px;background:var(--ws-active);color:var(--ws-accent-text);flex:0 0 auto}
 .ws-voiced-pill svg{width:12px;height:12px}
 .ws-sev{display:inline-flex;padding:2px 8px;border-radius:4px;font:600 12px/16px var(--ws-font-body)}
@@ -693,12 +701,12 @@ input::placeholder,textarea::placeholder{color:var(--ws-text-3)}
 .ws-vrow .c-id{font:600 12px/16px var(--ws-font-ui);color:var(--ws-text-2);font-variant-numeric:tabular-nums}
 .ws-vlist{display:flex;flex-direction:column;gap:12px}
 .ws-vrow{background:var(--ws-surface);border-radius:4px;padding:16px 18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,380px);gap:16px;align-items:start}
-.ws-vrow .ws-voice{margin:0}
+.ws-vrow .ws-voice-stack{margin:0}
 .ws-vrow h3{font:700 14px/18px var(--ws-font-body);color:var(--ws-text);margin:6px 0 4px}
 .ws-vrow .ws-vmeta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font:400 12px/16px var(--ws-font-body);color:var(--ws-text-2)}
 .ws-vrow .ws-vscript{font:400 14px/20px var(--ws-font-body);color:var(--ws-text-2);margin-top:6px}
 .ws-vhead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}
-.ws-vstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:20px}
+.ws-vstats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:20px}
 .ws-vstat{background:var(--ws-surface);border-radius:4px;padding:16px 18px}
 .ws-vstat b{display:block;font:700 28px/1.1 var(--ws-font-ui);color:var(--ws-text);margin-top:4px}
 .ws-vstat span{font:400 12px/16px var(--ws-font-ui);color:var(--ws-text-2)}
@@ -3309,7 +3317,7 @@ function play(b){var a=b.querySelector('audio');if(!a)return;if(cur&&cur!==b)sto
 document.addEventListener('click',function(e){var t=e.target;var pb=t.closest&&t.closest('[data-ws-play]');
 if(pb){e.preventDefault();e.stopPropagation();var b=box(pb);if(b.classList.contains('playing')){stop(b)}else{window.__wsQueue=null;play(b)}return}
 var sk=t.closest&&t.closest('[data-ws-seek]');if(sk){e.stopPropagation();var b2=box(sk),a2=b2.querySelector('audio');if(a2&&a2.duration){var r=sk.getBoundingClientRect();a2.currentTime=a2.duration*Math.min(1,Math.max(0,(e.clientX-r.left)/r.width))}return}
-var pa=t.closest&&t.closest('[data-ws-playall]');if(pa){e.preventDefault();var all=[].slice.call(document.querySelectorAll('.ws-vlist .ws-voice:not(.ws-voice-hold)'));if(all.length){window.__wsQueue=all.slice(1);play(all[0])}}},true);
+var pa=t.closest&&t.closest('[data-ws-playall]');if(pa){e.preventDefault();var all=[].slice.call(document.querySelectorAll('.ws-vlist .ws-voice:not(.ws-voice-hold):not(.ws-voice-pub)'));if(all.length){window.__wsQueue=all.slice(1);play(all[0])}}},true);
 })();
 </script></body>
 </html>
